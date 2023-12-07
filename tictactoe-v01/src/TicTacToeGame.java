@@ -56,6 +56,7 @@ public class TicTacToeGame {
         gui.add(messages, BorderLayout.SOUTH);
 
         messages.add(playerturn);
+		Logger.log("manipulates");
         playerturn.setText("Player 1 to play 'X'");
 
         reset.addActionListener(new ActionListener() {
@@ -69,10 +70,12 @@ public class TicTacToeGame {
             for(int column = 0; column<3 ;column++) {
 		blocksData[row][column] = new TicTacToeBlock(this);
 		// The last row contains the legal moves
+		Logger.log("manipulates");
 		blocksData[row][column].setContents("");
 		blocksData[row][column].setIsLegalMove(true);
                 blocks[row][column] = new JButton();
                 blocks[row][column].setPreferredSize(new Dimension(75,75));
+		Logger.log("updates");
 		updateBlock(row,column);
                 game.add(blocks[row][column]);
                 blocks[row][column].addActionListener(new ActionListener() {
@@ -102,7 +105,9 @@ public class TicTacToeGame {
 	if(player.equals("1")) {
 	    // Check whether player 1 won
 	    if(block==blocks[0][0]) {
+			Logger.log("manipulates");
 		blocksData[0][0].setContents("X");
+		Logger.log("updates");
 		updateBlock(0,0);
 		player = "2";
 		if(movesLeft<7) {
@@ -119,7 +124,9 @@ public class TicTacToeGame {
 		    }
 		}
 	    } else if(block==blocks[0][1]) {
+			Logger.log("manipulates");
 		blocksData[0][1].setContents("X");
+		Logger.log("updates");
 		updateBlock(0,1);
 		player = "2";
 		if(movesLeft<7) {
@@ -134,7 +141,9 @@ public class TicTacToeGame {
 		    }
 		}
 	    } else if(block==blocks[0][2]) {
+			Logger.log("manipulates");
 		blocksData[0][2].setContents("X");
+		Logger.log("updates");
 		updateBlock(0,2);
 		player = "2";
 		if(movesLeft<7) {
@@ -151,7 +160,9 @@ public class TicTacToeGame {
 		    }
 		}
 	    } else if(block==blocks[1][0]) {
+			Logger.log("manipulates");
 		blocksData[1][0].setContents("X");
+		Logger.log("updates");
 		updateBlock(1,0);
 		updateBlock(0,0);
 		player = "2";
@@ -167,7 +178,9 @@ public class TicTacToeGame {
 		    }
 		}
 	    } else if(block==blocks[1][1]) {
+			Logger.log("manipulates");
 		blocksData[1][1].setContents("X");
+		Logger.log("updates");
 		updateBlock(1,1);
 		updateBlock(0,1);
 		player = "2";
@@ -187,7 +200,9 @@ public class TicTacToeGame {
 		    }
 		}
 	    } else if(block==blocks[1][2]) {
+			Logger.log("manipulates");
 		blocksData[1][2].setContents("X");
+		Logger.log("updates");
 		updateBlock(1,2);
 		updateBlock(0,2);
 		player = "2";
@@ -203,7 +218,9 @@ public class TicTacToeGame {
 		    }
 		}
 	    } else if(block==blocks[2][0]) {
+			Logger.log("manipulates");
 		blocksData[2][0].setContents("X");
+		Logger.log("updates");
 		updateBlock(2,0);
 		updateBlock(1,0);
 		player = "2";
@@ -221,7 +238,9 @@ public class TicTacToeGame {
 		    }
 		}
 	    } else if(block==blocks[2][1]) {
+			Logger.log("manipulates");
 		blocksData[2][1].setContents("X");
+		Logger.log("updates");
 		updateBlock(2,1);
 		updateBlock(1,1);
 		player = "2";
@@ -237,7 +256,9 @@ public class TicTacToeGame {
 		    }
 		}
 	    } else if(block==blocks[2][2]) {
+			Logger.log("manipulates");
 		blocksData[2][2].setContents("X");
+		Logger.log("updates");
 		updateBlock(2,2);
 		updateBlock(1,2);
 		player = "2";
@@ -258,7 +279,9 @@ public class TicTacToeGame {
 	} else {
 	    // Check whether player 2 won
 	    if(block==blocks[0][0]) {
+			Logger.log("manipulates");
 		blocksData[0][0].setContents("O");
+		Logger.log("updates");
 		updateBlock(0,0);
 		player = "1";
 		if(movesLeft<7) {
@@ -275,7 +298,9 @@ public class TicTacToeGame {
 		    }
 		}
 	    } else if(block==blocks[0][1]) {
+			Logger.log("manipulates");
 		blocksData[0][1].setContents("O");
+		Logger.log("updates");
 		updateBlock(0,1);
 		player = "1";
 		if(movesLeft<7) {
@@ -290,7 +315,9 @@ public class TicTacToeGame {
 		    }
 		}
 	    } else if(block==blocks[0][2]) {
+			Logger.log("manipulates");
 		blocksData[0][2].setContents("O");
+		Logger.log("updates");
 		updateBlock(0,2);
 		player = "1";
 		if(movesLeft<7) {
@@ -307,7 +334,9 @@ public class TicTacToeGame {
 		    }
 		}
 	    } else if(block==blocks[1][0]) {
+			Logger.log("manipulates");
 		blocksData[1][0].setContents("O");
+		Logger.log("updates");
 		updateBlock(1,0);
 		updateBlock(0,0);
 		player = "1";
@@ -323,7 +352,9 @@ public class TicTacToeGame {
 		    }
 		}
 	    } else if(block==blocks[1][1]) {
+			Logger.log("manipulates");
 		blocksData[1][1].setContents("O");
+		Logger.log("updates");
 		updateBlock(1,1);
 		updateBlock(0,1);
 		player = "1";
@@ -343,7 +374,9 @@ public class TicTacToeGame {
 		    }
 		}
 	    } else if(block==blocks[1][2]) {
+			Logger.log("manipulates");
 		blocksData[1][2].setContents("O");
+		Logger.log("updates");
 		updateBlock(1,2);
 		updateBlock(0,2);
 		player = "1";
@@ -359,7 +392,9 @@ public class TicTacToeGame {
 		    }
 		}
 	    } else if(block==blocks[2][0]) {
+			Logger.log("manipulates");
 		blocksData[2][0].setContents("O");
+		Logger.log("updates");
 		updateBlock(2,0);
 		updateBlock(1,0);
 		player = "1";
@@ -377,7 +412,9 @@ public class TicTacToeGame {
 		    }
 		}
 	    } else if(block==blocks[2][1]) {
+			Logger.log("manipulates");
 		blocksData[2][1].setContents("O");
+		Logger.log("updates");
 		updateBlock(2,1);
 		updateBlock(1,1);
 		player = "1";
@@ -393,7 +430,9 @@ public class TicTacToeGame {
 		    }
 		}
 	    } else if(block==blocks[2][2]) {
+			Logger.log("manipulates");
 		blocksData[2][2].setContents("O");
+		Logger.log("updates");
 		updateBlock(2,2);
 		updateBlock(1,2);
 		player = "1";
@@ -447,11 +486,13 @@ public class TicTacToeGame {
             for(int column = 0;column<3;column++) {
                 blocksData[row][column].reset();
 		blocksData[row][column].setIsLegalMove(true);
+		Logger.log("updates");
 		updateBlock(row,column);
             }
         }
         player = "1";
         movesLeft = 9;
+		Logger.log("manipulates");
         playerturn.setText("Player 1 to play 'X'");
     }
 }
